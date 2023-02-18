@@ -235,11 +235,19 @@ h4 {
 }
 .article-entry p,
 .article-entry li {
+  /*
   text-align: inherit !important;
   line-height: 1.75em !important;
   font-size: 1.2em;
   max-width: 42em;
   color: #333;
+  */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 5; 
+  line-height: 20px;
+  max-height: 100px;
 }
 .article-entry h1,
 h2,
