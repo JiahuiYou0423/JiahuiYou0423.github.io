@@ -211,19 +211,19 @@
 <p>The figure shows the location of alternative fuel stations in the United States in 2022. The map displays different colored markers, each representing a different type of alternative fuel station.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots(figsize=(22, 20))</span><br><span class="line">gdf_degree.to_crs(epsg=3857).plot(ax = ax,</span><br><span class="line">                 x=&quot;x&quot;,</span><br><span class="line">                 y=&quot;y&quot;,</span><br><span class="line">                 kind = &quot;hexbin&quot;,</span><br><span class="line">                 cmap=&quot;gist_heat_r&quot;,</span><br><span class="line">                 alpha=0.5,</span><br><span class="line">                 gridsize=400,</span><br><span class="line">                 bins =&quot;log&quot;);</span><br><span class="line">extent = (-15600000, -7530000, 2500000, 6800000)</span><br><span class="line">ax.axis(extent)</span><br><span class="line">ctx.add_basemap(ax)</span><br><span class="line">ax.set_title(&quot;Density of ALT fuel station in US&quot;)</span><br></pre></td></tr></table></figure>
 
-<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/1.PNG" class="">
+<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/1.png" class="">
 
 <p>The density distribution of ALT fuel station suggests that alternative fuel stations are more commonly found in densely populated areas, like Los Angeles, New York City, and Washington, D.C.<br>It highlights the concentration of different types of stations in major metropolitan areas and provides insight into the distribution of alternative fuel infrastructure across the country.<br>Among all the types of ALT fuel station, ELEC reaches 48238 over US, next is E85, which is about 3147. ELEC is the dominant type of ALT fuel station.</p>
 <h2 id="Comparing-with-Electricity-vehicle"><a href="#Comparing-with-Electricity-vehicle" class="headerlink" title="Comparing with Electricity vehicle"></a>Comparing with Electricity vehicle</h2><p>States with more charging stations tend to have a higher number of EVs, and vice versa. The availability of charging infrastructure is a key factor in determining the rate of EV adoption in each state. I joined the ALT fuel station dataset with EVs registration dataset to further analyze the insights behind the data.</p>
 <p>The 20 states that have most number of EVs and ELEC station can be found in the following figures.</p>
-<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/2.PNG" class="">
+<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/2.png" class="">
 
 
-<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/3.PNG" class="">
+<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/3.png" class="">
 
 
 <p>California has the highest number of both charging stations (over 13,000) and EVs (over 500,000), followed by Florida and Texas. On the other hand, states such as Wyoming and Alaska have very few charging stations and EVs.</p>
-<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/4.PNG" class="">
+<img src="http://jiahuiyou0423.github.io/2023/02/13/Alternative-fuel-station/images/4.png" class="">
 
 
 <p>The ratio of electric charging stations to electric vehicles (EVs) varies significantly from state to state. New Jersey and Nevada have the lowest ratios, with relatively few charging stations per EV. California, on the other hand, has a large number of both EVs and charging stations, but the ratio of charging stations to EVs is relatively low, at about 0.025. North Dakota, on the other hand, has the highest ratio, with nearly 0.19 charging stations per EV. This highlights the need for a more equitable distribution of charging infrastructure to support the growing number of EVs on the road.</p>
